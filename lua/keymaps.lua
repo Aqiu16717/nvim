@@ -32,3 +32,6 @@ vim.keymap.set("n", "tl", ":+tabnext<CR>")
 vim.keymap.set("n", "th", ":-tabnext<CR>")
 vim.keymap.set("n", "tc", ":tabclose<CR>")
 
+
+-- markdown preview
+vim.keymap.set("n", "<LEADER>p", ":MarkdownPreviewToggle<CR>")
