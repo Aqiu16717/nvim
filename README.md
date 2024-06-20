@@ -27,4 +27,11 @@ xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' -e 'keycode 0x9=Caps_Lock'
 source /etc/profile
 ```
 
+## About clipboard
+
+* Arch Linux
+    * `sudo pacman -S xclip`
+    * `:set clipboard = 'unnamedplus'`
+* Other System
+    * refer to [this](https://ramezanpour.net/post/2022/07/24/access-os-clipboard-in-neovim)
 

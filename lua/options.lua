@@ -1,4 +1,9 @@
+-- mouse
 vim.opt.mouse = 'a' -- allow the mouse to be used
+
+-- clipboard
+vim.opt.clipboard = 'unnamedplus' -- Copy/paste to system clipboard
+
 
 -- Tab
 vim.opt.tabstop = 4 -- number of visual spaces per TAB

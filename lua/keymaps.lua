@@ -35,3 +35,7 @@ vim.keymap.set("n", "tc", ":tabclose<CR>")
 
 -- markdown preview
 vim.keymap.set("n", "<LEADER>p", ":MarkdownPreviewToggle<CR>")
+
+-- nvim tree
+vim.keymap.set("n", "<LEADER>t", ":NvimTreeToggle<CR>")
+

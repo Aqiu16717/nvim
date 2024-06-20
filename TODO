@@ -1,0 +1,4 @@
+* [ ] Why my contributions was not shown? The brach name is master?
+* [ ] What the fuck with lspconfig. It seems not installed correctly.
+* [x] Fix the font problem in the botomm bar and nvim-tree.
+* [x] install clangd
