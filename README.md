@@ -35,3 +35,11 @@ source /etc/profile
 * Other System
     * refer to [this](https://ramezanpour.net/post/2022/07/24/access-os-clipboard-in-neovim)
 
+## Font
+
+```
+git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1
+./install.sh
+sudo fc-cache -fv
+```
+* set terminal custom font to hack-font
