@@ -39,3 +39,9 @@ vim.keymap.set("n", "<LEADER>p", ":MarkdownPreviewToggle<CR>")
 -- nvim tree
 vim.keymap.set("n", "<LEADER>t", ":NvimTreeToggle<CR>")
 
+
+-- telescope
+vim.keymap.set('n', '<leader>ff', ":Telescope find_files<CR>")
+vim.keymap.set('n', '<leader>fg', ":Telescope live_grep<CR>")
+vim.keymap.set('n', '<leader>fb', ":Telescope buffers<CR>")
+vim.keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>")
