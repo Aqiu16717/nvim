@@ -1,3 +1,35 @@
+```
+.
+├── init.lua
+├── lazy-lock.json
+├── lua
+│   ├── colorscheme.lua
+│   ├── keymaps.lua
+│   ├── lazynvim-init.lua
+│   ├── lsp.lua
+│   ├── options.lua
+│   └── plugins
+│       ├── plugin-lualine.lua
+│       ├── plugin-markdown-preview.lua
+│       ├── plugin-mason-lspconfig.lua
+│       ├── plugin-mason.lua
+│       ├── plugin-nvim-lspconfig.lua
+│       ├── plugin-nvim-tree.lua
+│       └── plugin-vimtex.lua
+├── README.md
+```
+
+## Plugin Manager
+
+* [lazy.nvim](https://github.com/folke/lazy.nvim) 
+
+## LSP
+
+* [mason](https://github.com/williamboman/mason.nvim)
+* [lspconfig](https://github.com/neovim/nvim-lspconfig)
+* [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
+
+
 ## Plugin
 
 * markdown previewer
