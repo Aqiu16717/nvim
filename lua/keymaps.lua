@@ -41,7 +41,12 @@ vim.keymap.set("n", "<LEADER>t", ":NvimTreeToggle<CR>")
 
 
 -- telescope
-vim.keymap.set('n', '<leader>ff', ":Telescope find_files<CR>")
-vim.keymap.set('n', '<leader>fg', ":Telescope live_grep<CR>")
-vim.keymap.set('n', '<leader>fb', ":Telescope buffers<CR>")
-vim.keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>")
+vim.keymap.set('n', '<LEADER>ff', ":Telescope find_files<CR>")
+vim.keymap.set('n', '<LEADER>fg', ":Telescope live_grep<CR>")
+vim.keymap.set('n', '<LEADER>fb', ":Telescope buffers<CR>")
+vim.keymap.set('n', '<LEADER>fh', ":Telescope help_tags<CR>")
+
+-- bufferline
+-- vim.keymap.set('n', 'bl', ":BufferlineCycleNext<CR>")
+-- vim.keymap.set('n', 'bh', ":BufferlineCyclePrev<CR>")
+
