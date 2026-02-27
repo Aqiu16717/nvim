@@ -77,30 +77,10 @@ return {
         config = function(_, opts)
             require("catppuccin").setup(opts)
 
-            -- Function to get system theme (macOS/Linux)
-            local function get_system_theme()
-                local theme = "light"
-                -- macOS
-                local handle = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null")
-                if handle then
-                    local result = handle:read("*a")
-                    handle:close()
-                    if result:match("Dark") then
-                        theme = "dark"
-                    end
-                end
-                return theme
-            end
-
-            -- Auto-detect and set theme
-            local function apply_theme()
-                local bg = get_system_theme()
-                vim.o.background = bg
-                vim.cmd.colorscheme("catppuccin")
-            end
-
-            -- Apply theme on startup
-            apply_theme()
+            -- Set default to dark theme (mocha)
+            -- Change to "light" for latte (light theme)
+            vim.o.background = "dark"
+            vim.cmd.colorscheme("catppuccin")
 
             -- Create user command to toggle theme
             vim.api.nvim_create_user_command("ThemeToggle", function()
