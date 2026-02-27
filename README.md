@@ -18,6 +18,10 @@ A modern, feature-rich Neovim configuration providing an IDE-like editing experi
 - 📝 Live Markdown preview
 - 📑 Code outline/symbols
 - 🎯 Code formatting
+- 🔀 Git integration with inline diff
+- ❓ Key binding hints with which-key
+- 💬 Quick code commenting
+- 🔄 Surround text manipulation
 
 ## 📋 Requirements
 
@@ -49,6 +53,8 @@ nvim
 ├── init.lua              # Entry point
 ├── lazy-lock.json        # Plugin lock file
 ├── lua/
+│   ├── core/
+│   │   └── autocmds.lua  # Autocommands
 │   ├── options.lua       # Vim options/settings
 │   ├── keymaps.lua       # Key mappings
 │   ├── lazynvim-init.lua # Plugin manager bootstrap
@@ -123,6 +129,32 @@ nvim
 | Key | Action |
 |-----|--------|
 | `<LEADER>p` | Toggle Markdown preview |
+
+### Git (Gitsigns)
+| Key | Action |
+|-----|--------|
+| `]c` / `[c` | Next / previous hunk |
+| `<LEADER>hs` | Stage hunk |
+| `<LEADER>hr` | Reset hunk |
+| `<LEADER>hp` | Preview hunk |
+| `<LEADER>hb` | Blame line |
+| `<LEADER>tb` | Toggle blame |
+| `<LEADER>hd` | Diff this |
+
+### Comment
+| Key | Action |
+|-----|--------|
+| `gcc` | Toggle line comment |
+| `gbc` | Toggle block comment |
+| `gc` (visual) | Toggle comment for selection |
+
+### Surround
+| Key | Action |
+|-----|--------|
+| `ys{motion}{char}` | Add surround |
+| `ds{char}` | Delete surround |
+| `cs{old}{new}` | Change surround |
+| `S{char}` (visual) | Surround selection |
 
 ## 📝 Commands
 
@@ -215,6 +247,10 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 | [vimtex](https://github.com/lervag/vimtex) | LaTeX support |
 | [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown preview |
 | [outline.nvim](https://github.com/hedyhli/outline.nvim) | Code outline |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git integration |
+| [which-key.nvim](https://github.com/folke/which-key.nvim) | Key binding hints |
+| [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Code commenting |
+| [nvim-surround](https://github.com/kylechui/nvim-surround) | Surround text manipulation |
 
 ## 📄 License
 

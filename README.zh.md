@@ -18,6 +18,10 @@
 - 📝 实时 Markdown 预览
 - 📑 代码大纲/符号列表
 - 🎯 代码格式化
+- 🔀 Git 集成与行内差异显示
+- ❓ 快捷键提示（which-key）
+- 💬 快速代码注释
+- 🔄 环绕文本操作
 
 ## 📋 环境要求
 
@@ -49,6 +53,8 @@ nvim
 ├── init.lua              # 入口文件
 ├── lazy-lock.json        # 插件锁定文件
 ├── lua/
+│   ├── core/
+│   │   └── autocmds.lua  # 自动命令
 │   ├── options.lua       # Vim 选项/设置
 │   ├── keymaps.lua       # 快捷键映射
 │   ├── lazynvim-init.lua # 插件管理器启动
@@ -123,6 +129,32 @@ nvim
 | 快捷键 | 功能 |
 |--------|------|
 | `<LEADER>p` | 切换 Markdown 预览 |
+
+### Git（Gitsigns）
+| 快捷键 | 功能 |
+|--------|------|
+| `]c` / `[c` | 下一个/上一个修改块 |
+| `<LEADER>hs` | 暂存修改块 |
+| `<LEADER>hr` | 重置修改块 |
+| `<LEADER>hp` | 预览修改块 |
+| `<LEADER>hb` | 查看行 blame |
+| `<LEADER>tb` | 切换 blame 显示 |
+| `<LEADER>hd` | 查看差异 |
+
+### 注释（Comment）
+| 快捷键 | 功能 |
+|--------|------|
+| `gcc` | 切换行注释 |
+| `gbc` | 切换块注释 |
+| `gc`（可视模式）| 切换选中区域注释 |
+
+### 环绕（Surround）
+| 快捷键 | 功能 |
+|--------|------|
+| `ys{motion}{char}` | 添加环绕字符 |
+| `ds{char}` | 删除环绕字符 |
+| `cs{old}{new}` | 修改环绕字符 |
+| `S{char}`（可视模式）| 为选中区域添加环绕 |
 
 ## 📝 常用命令
 
@@ -215,6 +247,10 @@ sudo fc-cache -fv
 | [vimtex](https://github.com/lervag/vimtex) | LaTeX 支持 |
 | [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown 预览 |
 | [outline.nvim](https://github.com/hedyhli/outline.nvim) | 代码大纲 |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git 集成 |
+| [which-key.nvim](https://github.com/folke/which-key.nvim) | 快捷键提示 |
+| [Comment.nvim](https://github.com/numToStr/Comment.nvim) | 代码注释 |
+| [nvim-surround](https://github.com/kylechui/nvim-surround) | 环绕文本操作 |
 
 ## 📄 许可证
 
