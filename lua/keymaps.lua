@@ -4,6 +4,9 @@ vim.g.mapleader = " "
 -- set no high light search
 vim.keymap.set("n", "<LEADER><CR>", ":nohlsearch<CR>")
 
+-- toggle theme (light/dark)
+vim.keymap.set("n", "<LEADER>bg", ":ThemeToggle<CR>", { desc = "Toggle light/dark theme" })
+
 -- set quit
 vim.keymap.set("n", "Q", ":q<CR>")
 

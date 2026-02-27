@@ -13,7 +13,7 @@ A modern, feature-rich Neovim configuration providing an IDE-like editing experi
 - 🔍 Fuzzy file finder and grep
 - 🌲 File explorer sidebar
 - ✨ Auto-completion with LSP support
-- 🎨 Beautiful colorschemes
+- 🎨 Beautiful colorschemes with auto light/dark mode
 - 📊 Status line and buffer tabs
 - 📝 Live Markdown preview
 - 📑 Code outline/symbols
@@ -85,6 +85,7 @@ nvim
 |-----|--------|
 | `Q` | Quit |
 | `<LEADER><CR>` | Clear search highlight |
+| `<LEADER>bg` | Toggle light/dark theme |
 
 ### Window Management
 | Key | Action |
@@ -164,6 +165,17 @@ nvim
 | `:Mason` | Open LSP/DAP/formatter installer |
 | `:Lazy` | Open plugin manager |
 | `:TSUpdate` | Update Treesitter parsers |
+| `:ThemeToggle` | Toggle between light and dark theme |
+| `:Theme {light/dark}` | Set specific theme |
+
+## 🎨 Theme
+
+This configuration uses [catppuccin](https://github.com/catppuccin/nvim) theme with:
+
+- **Light mode**: `catppuccin-latte`
+- **Dark mode**: `catppuccin-mocha`
+
+The theme automatically detects your system theme on startup. You can also manually toggle with `<LEADER>bg`.
 
 ## 🔧 Maintenance
 
@@ -234,7 +246,7 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 | Plugin | Description |
 |--------|-------------|
 | [lazy.nvim](https://github.com/folke/lazy.nvim) | Plugin manager |
-| [catppuccin](https://github.com/catppuccin/nvim) | Colorscheme |
+| [catppuccin](https://github.com/catppuccin/nvim) | Colorscheme with auto light/dark mode |
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy finder |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Syntax highlighting |
 | [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP configurations |

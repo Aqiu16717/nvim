@@ -13,7 +13,7 @@
 - 🔍 模糊文件搜索和文本查找
 - 🌲 文件资源管理器侧边栏
 - ✨ 自动补全与 LSP 支持
-- 🎨 精美的配色方案
+- 🎨 精美配色方案，支持自动/手动切换浅色/深色模式
 - 📊 状态栏和标签页
 - 📝 实时 Markdown 预览
 - 📑 代码大纲/符号列表
@@ -85,6 +85,7 @@ nvim
 |--------|------|
 | `Q` | 退出 |
 | `<LEADER><CR>` | 清除搜索高亮 |
+| `<LEADER>bg` | 切换浅色/深色主题 |
 
 ### 窗口管理
 | 快捷键 | 功能 |
@@ -164,6 +165,17 @@ nvim
 | `:Mason` | 打开 LSP/DAP/格式化工具安装器 |
 | `:Lazy` | 打开插件管理器 |
 | `:TSUpdate` | 更新 Treesitter 解析器 |
+| `:ThemeToggle` | 切换浅色/深色主题 |
+| `:Theme {light/dark}` | 设置指定主题 |
+
+## 🎨 主题
+
+本配置使用 [catppuccin](https://github.com/catppuccin/nvim) 主题：
+
+- **浅色模式**：`catppuccin-latte`
+- **深色模式**：`catppuccin-mocha`
+
+主题会在启动时自动检测系统主题。你也可以使用 `<LEADER>bg` 手动切换。
 
 ## 🔧 维护操作
 
@@ -234,7 +246,7 @@ sudo fc-cache -fv
 | 插件 | 说明 |
 |------|------|
 | [lazy.nvim](https://github.com/folke/lazy.nvim) | 插件管理器 |
-| [catppuccin](https://github.com/catppuccin/nvim) | 配色方案 |
+| [catppuccin](https://github.com/catppuccin/nvim) | 配色方案，支持自动深浅色切换 |
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | 模糊查找 |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法高亮 |
 | [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP 配置 |
