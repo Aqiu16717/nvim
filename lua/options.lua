@@ -15,6 +15,42 @@ vim.opt.expandtab = true -- tabs are spaces
 vim.opt.number = true -- show absolute number
 vim.opt.relativenumber = true -- add numbers to each line on the left side
 vim.opt.cursorline = true -- highlight cursor line underneath the cursor horizontally
+vim.opt.cursorlineopt = "number,line" -- highlight both line number and line
+
+-- Only show cursorline in current window and in normal mode
+local cursorline_group = vim.api.nvim_create_augroup("CursorLine", { clear = true })
+
+vim.api.nvim_create_autocmd({ "WinLeave", "BufWinLeave" }, {
+    group = cursorline_group,
+    callback = function()
+        vim.opt_local.cursorline = false
+    end,
+    desc = "Hide cursorline when leaving window",
+})
+
+vim.api.nvim_create_autocmd({ "WinEnter", "BufWinEnter" }, {
+    group = cursorline_group,
+    callback = function()
+        vim.opt_local.cursorline = true
+    end,
+    desc = "Show cursorline when entering window",
+})
+
+vim.api.nvim_create_autocmd("InsertEnter", {
+    group = cursorline_group,
+    callback = function()
+        vim.opt_local.cursorline = false
+    end,
+    desc = "Hide cursorline in insert mode",
+})
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+    group = cursorline_group,
+    callback = function()
+        vim.opt_local.cursorline = true
+    end,
+    desc = "Show cursorline when leaving insert mode",
+})
 
 
 -- Searching
