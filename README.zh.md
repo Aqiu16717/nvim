@@ -21,7 +21,7 @@
 
 ## 📋 环境要求
 
-- Neovim >= 0.9
+- Neovim >= 0.11
 - Git（用于克隆插件）
 - [Nerd Font](https://www.nerdfonts.com/)（用于图标，推荐 Hack Nerd Font）
 - `xclip`（Linux，用于系统剪贴板）
@@ -52,7 +52,7 @@ nvim
 │   ├── options.lua       # Vim 选项/设置
 │   ├── keymaps.lua       # 快捷键映射
 │   ├── lazynvim-init.lua # 插件管理器启动
-│   ├── lsp.lua           # LSP 配置
+│   ├── lsp.lua           # 原生 LSP 配置
 │   ├── colorscheme.lua   # 主题设置
 │   ├── command.lua       # 自定义命令
 │   └── plugins/          # 插件配置

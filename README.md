@@ -21,7 +21,7 @@ A modern, feature-rich Neovim configuration providing an IDE-like editing experi
 
 ## 📋 Requirements
 
-- Neovim >= 0.9
+- Neovim >= 0.11
 - Git (for cloning plugins)
 - [Nerd Font](https://www.nerdfonts.com/) (for icons, e.g., Hack Nerd Font)
 - `xclip` (Linux, for system clipboard)
@@ -52,7 +52,7 @@ nvim
 │   ├── options.lua       # Vim options/settings
 │   ├── keymaps.lua       # Key mappings
 │   ├── lazynvim-init.lua # Plugin manager bootstrap
-│   ├── lsp.lua           # LSP configurations
+│   ├── lsp.lua           # Native LSP configurations
 │   ├── colorscheme.lua   # Theme settings
 │   ├── command.lua       # Custom commands
 │   └── plugins/          # Plugin configurations
