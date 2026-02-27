@@ -1,77 +1,221 @@
+# Neovim Configuration
+
+<p align="center">
+  <b>Modern Neovim Configuration with Lua</b><br>
+  <a href="README.zh.md">中文版本</a>
+</p>
+
+---
+
+## 🚀 Overview
+
+A modern, feature-rich Neovim configuration providing an IDE-like editing experience with:
+- 🔍 Fuzzy file finder and grep
+- 🌲 File explorer sidebar
+- ✨ Auto-completion with LSP support
+- 🎨 Beautiful colorschemes
+- 📊 Status line and buffer tabs
+- 📝 Live Markdown preview
+- 📑 Code outline/symbols
+- 🎯 Code formatting
+
+## 📋 Requirements
+
+- Neovim >= 0.9
+- Git (for cloning plugins)
+- [Nerd Font](https://www.nerdfonts.com/) (for icons, e.g., Hack Nerd Font)
+- `xclip` (Linux, for system clipboard)
+
+## 📦 Installation
+
+```bash
+# Backup your existing config
+mv ~/.config/nvim ~/.config/nvim.backup
+
+# Clone this repository
+git clone <your-repo-url> ~/.config/nvim
+
+# Start Neovim (plugins will be auto-installed)
+nvim
+
+# Install LSP servers
+:Mason
+```
+
+## 📁 Directory Structure
+
 ```
 .
-├── init.lua
-├── lazy-lock.json
-├── lua
-│   ├── colorscheme.lua
-│   ├── keymaps.lua
-│   ├── lazynvim-init.lua
-│   ├── lsp.lua
-│   ├── options.lua
-│   └── plugins
-│       ├── plugin-lualine.lua
-│       ├── plugin-markdown-preview.lua
-│       ├── plugin-mason-lspconfig.lua
-│       ├── plugin-mason.lua
-│       ├── plugin-nvim-lspconfig.lua
-│       ├── plugin-nvim-tree.lua
-│       └── plugin-vimtex.lua
-├── README.md
+├── init.lua              # Entry point
+├── lazy-lock.json        # Plugin lock file
+├── lua/
+│   ├── options.lua       # Vim options/settings
+│   ├── keymaps.lua       # Key mappings
+│   ├── lazynvim-init.lua # Plugin manager bootstrap
+│   ├── lsp.lua           # LSP configurations
+│   ├── colorscheme.lua   # Theme settings
+│   ├── command.lua       # Custom commands
+│   └── plugins/          # Plugin configurations
+│       ├── plugin-catppuccin.lua
+│       ├── plugin-telescope.lua
+│       ├── plugin-nvim-treesitter.lua
+│       ├── plugin-nvim-lspconfig.lua
+│       ├── plugin-mason.lua
+│       ├── plugin-nvim-cmp.lua
+│       ├── plugin-nvim-tree.lua
+│       ├── plugin-lualine.lua
+│       ├── plugin-bufferline.lua
+│       ├── plugin-conform.lua
+│       └── ...
+└── README.md
 ```
 
-## Plugin Manager
+## ⌨️ Key Mappings
 
-* [lazy.nvim](https://github.com/folke/lazy.nvim) 
+**Leader key:** `<Space>`
 
-## LSP
+### General
+| Key | Action |
+|-----|--------|
+| `Q` | Quit |
+| `<LEADER><CR>` | Clear search highlight |
 
-* [mason](https://github.com/williamboman/mason.nvim)
-* [lspconfig](https://github.com/neovim/nvim-lspconfig)
-* [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
+### Window Management
+| Key | Action |
+|-----|--------|
+| `sh` / `sl` | Split left / right |
+| `sj` / `sk` | Split down / up |
+| `<LEADER>h/j/k/l` | Navigate windows |
+| `Ctrl+Arrow` | Resize window |
 
+### Tabs
+| Key | Action |
+|-----|--------|
+| `tn` | New tab |
+| `tl` / `th` | Next / previous tab |
+| `tc` | Close tab |
 
-## Plugin
+### File Explorer
+| Key | Action |
+|-----|--------|
+| `<LEADER>t` | Toggle file tree (nvim-tree) |
 
-* markdown previewer
+### Fuzzy Finder (Telescope)
+| Key | Action |
+|-----|--------|
+| `<LEADER>ff` | Find files |
+| `<LEADER>fg` | Live grep |
+| `<LEADER>fb` | Find buffers |
+| `<LEADER>fh` | Find help tags |
 
+### LSP
+| Key | Action |
+|-----|--------|
+| `gd` | Go to definition |
+| `gi` | Go to implementation |
+| `gr` | Find references |
+| `gh` | Hover documentation |
+| `<LEADER>F` | Format code |
+| `<LEADER>r` | Rename symbol |
+| `<LEADER>ca` | Code action |
+
+### Markdown
+| Key | Action |
+|-----|--------|
+| `<LEADER>p` | Toggle Markdown preview |
+
+## 📝 Commands
+
+| Command | Description |
+|---------|-------------|
+| `:Format` | Format current buffer |
+| `:Mason` | Open LSP/DAP/formatter installer |
+| `:Lazy` | Open plugin manager |
+| `:TSUpdate` | Update Treesitter parsers |
+
+## 🔧 Maintenance
+
+```vim
+" Update all plugins
+:Lazy update
+
+" Sync plugins
+:Lazy sync
+
+" Check health
+:checkhealth lazy
+:checkhealth mason
+:checkhealth lsp
 ```
-amcco/markdown-preview.nvim
-```
 
-## About `Esc`
+## ⚙️ Configuration
 
-* [`Ctrl-C` is not the same as `Esc`](https://vi.stackexchange.com/questions/25764/use-control-c-instead-of-escape-key)
+### Keyboard Remapping
 
-
-* map `Caps_Lock` to `Esc`. There exists no `Caps_Lock` anymore.
+#### Map Caps Lock to Esc
 
 ```bash
 sudo nvim /etc/profile
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'  
-sourc /etc/profile
+# Add:
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+source /etc/profile
 ```
 
-* exchange CapsLock and Esc
+#### Exchange Caps Lock and Esc
 
 ```bash
 sudo nvim /etc/profile
+# Add:
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' -e 'keycode 0x9=Caps_Lock'
 source /etc/profile
 ```
 
-## About clipboard
+> ⚠️ Note: `Ctrl-C` is NOT the same as `Esc`
 
-* Arch Linux
-    * `sudo pacman -S xclip`
-    * `:set clipboard = 'unnamedplus'`
-* Other System
-    * refer to [this](https://ramezanpour.net/post/2022/07/24/access-os-clipboard-in-neovim)
+### Clipboard
 
-## Font
+#### Arch Linux
 
+```bash
+sudo pacman -S xclip
+# Already set in options.lua:
+# vim.opt.clipboard = 'unnamedplus'
 ```
+
+#### Other Systems
+
+Refer to: https://ramezanpour.net/post/2022/07/24/access-os-clipboard-in-neovim
+
+### Font
+
+```bash
 git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1
+cd nerd-fonts
 ./install.sh
 sudo fc-cache -fv
 ```
-* set terminal custom font to hack-font
+
+Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
+
+## 📦 Plugins
+
+| Plugin | Description |
+|--------|-------------|
+| [lazy.nvim](https://github.com/folke/lazy.nvim) | Plugin manager |
+| [catppuccin](https://github.com/catppuccin/nvim) | Colorscheme |
+| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy finder |
+| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Syntax highlighting |
+| [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP configurations |
+| [mason.nvim](https://github.com/williamboman/mason.nvim) | LSP/DAP/formatter installer |
+| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | Auto-completion |
+| [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) | File explorer |
+| [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Status line |
+| [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Buffer tabs |
+| [conform.nvim](https://github.com/stevearc/conform.nvim) | Code formatting |
+| [vimtex](https://github.com/lervag/vimtex) | LaTeX support |
+| [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown preview |
+| [outline.nvim](https://github.com/hedyhli/outline.nvim) | Code outline |
+
+## 📄 License
+
+MIT License
