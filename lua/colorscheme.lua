@@ -1,5 +1,5 @@
--- colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
-vim.cmd.colorscheme "catppuccin-latte"
+-- Colorscheme is loaded by catppuccin plugin config
+-- See lua/plugins/plugin-catppuccin.lua
 
--- bufferline
+-- Enable true color support
 vim.opt.termguicolors = true
