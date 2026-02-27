@@ -101,6 +101,13 @@ nvim
 | `tn` | New tab |
 | `tl` / `th` | Next / previous tab |
 | `tc` | Close tab |
+### Buffer (Bufferline)
+| Key | Action |
+|-----|--------|
+| `bh` | Previous buffer |
+| `bl` | Next buffer |
+| `bd` | Close current buffer |
+| `bq` | Force close buffer |
 
 ### File Explorer
 | Key | Action |
