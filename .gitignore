@@ -1,0 +1,33 @@
+# Neovim swap files
+*.swp
+*.swo
+*~
+.netrwhist
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Plugin related (if any local cache)
+plugin/packer_compiled.lua
+
+# Local configuration (if exists)
+lua/local/
+lua/local*.lua
+
+# Log files
+*.log
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Backup files
+*.bak
+*.backup
