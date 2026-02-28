@@ -118,9 +118,28 @@ nvim
 | Key | Action |
 |-----|--------|
 | `<LEADER>ff` | Find files |
-| `<LEADER>fg` | Live grep |
+| `<LEADER>fg` | Live grep (search text in project) |
 | `<LEADER>fb` | Find buffers |
 | `<LEADER>fh` | Find help tags |
+
+### Search
+
+#### Search in Current File (Native Vim)
+| Key | Action |
+|-----|--------|
+| `/pattern` | Search forward for pattern |
+| `?pattern` | Search backward for pattern |
+| `n` | Next match |
+| `N` | Previous match |
+| `*` | Search current word (forward) |
+| `#` | Search current word (backward) |
+| `<LEADER><CR>` | Clear search highlight |
+
+#### Search in Project (Telescope)
+| Key | Action |
+|-----|--------|
+| `<LEADER>fg` | Live grep - search text across all files |
+| `<LEADER>ff` | Find files by name |
 
 ### LSP
 | Key | Action |
