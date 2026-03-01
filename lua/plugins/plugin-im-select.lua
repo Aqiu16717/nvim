@@ -3,29 +3,41 @@ return {
         "keaising/im-select.nvim",
         event = "VeryLazy",
         config = function()
+            -- Check if im-select binary exists using vim's executable function
+            if vim.fn.executable("im-select") ~= 1 then
+                vim.notify(
+                    "[im-select] Binary not found. Input method auto-switching is disabled.\n" ..
+                    "To enable, install im-select:\n" ..
+                    "  macOS: brew install im-select\n" ..
+                    "  Or: curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install.sh | sh",
+                    vim.log.levels.WARN
+                )
+                return
+            end
+
             require("im_select").setup({
-                -- 默认输入法（英文）
+                -- Default input method (English)
                 default_im_select = "com.apple.keylayout.US",
 
-                -- 切换到默认输入法的触发事件
+                -- Events to switch to default input method
                 set_default_events = {
-                    "VimEnter",       -- 进入 Neovim
-                    "FocusGained",    -- 窗口获得焦点
-                    "InsertLeave",    -- 离开插入模式
-                    "CmdLineLeave",   -- 离开命令行
+                    "VimEnter",
+                    "FocusGained",
+                    "InsertLeave",
+                    "CmdLineLeave",
                 },
 
-                -- 恢复之前输入法的触发事件
+                -- Events to restore previous input method
                 set_previous_events = {
-                    "InsertEnter",    -- 进入插入模式
+                    "InsertEnter",
                 },
 
-                -- 保持默认输入法的事件
+                -- Events to keep default input method
                 keep_default_events = {
-                    "FocusLost",      -- 窗口失去焦点
+                    "FocusLost",
                 },
 
-                -- 异步执行（避免阻塞）
+                -- Async execution (non-blocking)
                 async = true,
             })
         end,
