@@ -224,20 +224,44 @@ nvim
 
 ### 输入法自动切换（im-select）
 
-如需自动输入法切换（普通模式英文，插入模式恢复）：
+本配置支持输入法自动切换：
+- **普通模式**：自动切换为英文
+- **插入模式**：恢复之前的输入法（如中文）
 
-#### macOS
+#### 前置要求
+
+im-select 是外部工具，必须单独安装（Mason/Lazy 无法安装）：
+
+##### macOS
 
 ```bash
-# 安装 im-select
+# 方式 1：Homebrew（推荐）
 brew tap daipeihust/tap
 brew install im-select
 
-# 或直接下载
+# 方式 2：直接下载
 curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install.sh | sh
 ```
 
-默认 macOS 输入法设置为 `com.apple.keylayout.US`。
+##### Windows
+
+从 [GitHub Releases](https://github.com/daipeihust/im-select/releases) 下载 `im-select.exe` 放到 PATH 目录。
+
+##### 验证安装
+
+```bash
+which im-select    # 应显示路径
+im-select          # 显示当前输入法 ID
+```
+
+#### 配置说明
+
+默认 macOS 输入法：`com.apple.keylayout.US`
+
+如需自定义，编辑 `lua/plugins/plugin-im-select.lua`：
+```lua
+default_im_select = "com.apple.keylayout.US"  -- 改为你的首选输入法
+```
 
 查看你的输入法 ID：
 ```bash

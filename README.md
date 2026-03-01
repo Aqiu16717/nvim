@@ -223,22 +223,46 @@ The theme automatically detects your system theme on startup. You can also manua
 
 ### Input Method Switching (im-select)
 
-For automatic input method switching (English in normal mode, restore in insert mode):
+This configuration includes automatic input method switching:
+- **Normal mode**: Automatically switches to English
+- **Insert mode**: Restores previous input method (e.g., Chinese)
 
-#### macOS
+#### Prerequisites
+
+im-select is an external tool that must be installed separately (Mason/Lazy cannot install it):
+
+##### macOS
 
 ```bash
-# Install im-select
+# Option 1: Homebrew (recommended)
 brew tap daipeihust/tap
 brew install im-select
 
-# Or download directly
+# Option 2: Direct download
 curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install.sh | sh
 ```
 
-The default macOS input method is set to `com.apple.keylayout.US`.
+##### Windows
 
-To find your input method source ID:
+Download `im-select.exe` from [GitHub Releases](https://github.com/daipeihust/im-select/releases) and place it in your PATH.
+
+##### Verify Installation
+
+```bash
+which im-select    # Should show path
+im-select          # Shows current input method ID
+```
+
+#### Configuration
+
+Default macOS input method: `com.apple.keylayout.US`
+
+To customize, edit `lua/plugins/plugin-im-select.lua`:
+```lua
+default_im_select = "com.apple.keylayout.US"  -- Change to your preference
+```
+
+Find your input method ID:
 ```bash
 im-select
 ```
