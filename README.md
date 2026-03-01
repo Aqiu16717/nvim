@@ -29,6 +29,7 @@ A modern, feature-rich Neovim configuration providing an IDE-like editing experi
 - Git (for cloning plugins)
 - [Nerd Font](https://www.nerdfonts.com/) (for icons, e.g., Hack Nerd Font)
 - `xclip` (Linux, for system clipboard)
+- `im-select` (Optional, for automatic input method switching on macOS)
 
 ## 📦 Installation
 
@@ -220,6 +221,28 @@ The theme automatically detects your system theme on startup. You can also manua
 
 ## ⚙️ Configuration
 
+### Input Method Switching (im-select)
+
+For automatic input method switching (English in normal mode, restore in insert mode):
+
+#### macOS
+
+```bash
+# Install im-select
+brew tap daipeihust/tap
+brew install im-select
+
+# Or download directly
+curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install.sh | sh
+```
+
+The default macOS input method is set to `com.apple.keylayout.US`.
+
+To find your input method source ID:
+```bash
+im-select
+```
+
 ### Keyboard Remapping
 
 #### Map Caps Lock to Esc
@@ -289,6 +312,7 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | Key binding hints |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Code commenting |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | Surround text manipulation |
+| [im-select.nvim](https://github.com/keaising/im-select.nvim) | Automatic input method switching |
 
 ## 📄 License
 

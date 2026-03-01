@@ -29,6 +29,7 @@
 - Git（用于克隆插件）
 - [Nerd Font](https://www.nerdfonts.com/)（用于图标，推荐 Hack Nerd Font）
 - `xclip`（Linux，用于系统剪贴板）
+- `im-select`（可选，用于 macOS 自动输入法切换）
 
 ## 📦 安装
 
@@ -221,6 +222,28 @@ nvim
 
 ## ⚙️ 常用配置
 
+### 输入法自动切换（im-select）
+
+如需自动输入法切换（普通模式英文，插入模式恢复）：
+
+#### macOS
+
+```bash
+# 安装 im-select
+brew tap daipeihust/tap
+brew install im-select
+
+# 或直接下载
+curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install.sh | sh
+```
+
+默认 macOS 输入法设置为 `com.apple.keylayout.US`。
+
+查看你的输入法 ID：
+```bash
+im-select
+```
+
 ### 键盘重映射
 
 #### 将 Caps Lock 映射为 Esc
@@ -290,6 +313,7 @@ sudo fc-cache -fv
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | 快捷键提示 |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | 代码注释 |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | 环绕文本操作 |
+| [im-select.nvim](https://github.com/keaising/im-select.nvim) | 自动输入法切换 |
 
 ## 📄 许可证
 
