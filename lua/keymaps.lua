@@ -49,9 +49,9 @@ vim.keymap.set('n', '<LEADER>fg', ":Telescope live_grep<CR>")
 vim.keymap.set('n', '<LEADER>fb', ":Telescope buffers<CR>")
 vim.keymap.set('n', '<LEADER>fh', ":Telescope help_tags<CR>")
 
--- bufferline
-vim.keymap.set('n', 'bl', ":BufferlineCycleNext<CR>", { desc = "Next buffer" })
-vim.keymap.set('n', 'bh', ":BufferlineCyclePrev<CR>", { desc = "Previous buffer" })
+-- buffer (use :bnext/:bprevious for reliability)
+vim.keymap.set('n', 'bl', ":bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set('n', 'bh', ":bprevious<CR>", { desc = "Previous buffer" })
 vim.keymap.set('n', 'bd', ":bdelete<CR>", { desc = "Close current buffer" })
 vim.keymap.set('n', 'bq', ":bdelete!<CR>", { desc = "Force close buffer" })
 
