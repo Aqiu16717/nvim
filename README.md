@@ -110,10 +110,46 @@ nvim
 | `bd` | Close current buffer |
 | `bq` | Force close buffer |
 
-### File Explorer
+### File Explorer (nvim-tree)
+
+#### Basic Operations
 | Key | Action |
 |-----|--------|
-| `<LEADER>t` | Toggle file tree (nvim-tree) |
+| `<LEADER>t` | Toggle file tree |
+| `q` | Close file tree |
+| `?` | Show help (all keymaps) |
+
+#### Navigation
+| Key | Action |
+|-----|--------|
+| `j` / `k` | Move down / up |
+| `h` | Collapse folder / Go to parent |
+| `l` / `Enter` | Expand folder / Open file |
+| `E` | Expand all folders |
+| `W` | Collapse all folders |
+| `H` | Toggle hidden files |
+
+#### Preview vs Open
+| Key | Action |
+|-----|--------|
+| `Tab` or `P` | **Preview file** (cursor stays in tree) |
+| `Enter` or `o` | **Open file** (cursor moves to file) |
+
+**Preview workflow**: Use `Tab` to preview multiple files without leaving tree, then `Enter` to open the desired file.
+
+#### File Operations
+| Key | Action |
+|-----|--------|
+| `a` | Add new file/folder |
+| `d` | Delete file/folder |
+| `r` | Rename file/folder |
+| `x` | Cut file/folder |
+| `c` | Copy file/folder |
+| `p` | Paste file/folder |
+| `y` | Copy file name |
+| `Y` | Copy relative path |
+| `gy` | Copy absolute path |
+| `R` | Refresh tree |
 
 ### Fuzzy Finder (Telescope)
 | Key | Action |
