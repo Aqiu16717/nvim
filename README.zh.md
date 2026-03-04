@@ -206,6 +206,29 @@ nvim
 | `<LEADER>tb` | 切换 blame 显示 |
 | `<LEADER>hd` | 查看差异 |
 
+### Git（Diffview）
+
+#### 打开/关闭
+| 快捷键 | 功能 |
+|--------|------|
+| `<LEADER>gd` | 打开 diff 视图（工作区）|
+| `<LEADER>gC` | 关闭 diff 视图 |
+| `<LEADER>gf` | 当前文件历史 |
+| `<LEADER>gF` | 项目文件历史 |
+
+#### Diffview 窗口内操作
+| 快捷键 | 功能 |
+|--------|------|
+| `q` | 关闭 diff 视图 |
+| `Tab` | 切换文件面板 |
+| `j` / `k` | 下一个/上一个文件 |
+| `Enter` / `o` | 打开文件 |
+| `-` | 暂存/取消暂存文件 |
+| `S` | 暂存所有文件 |
+| `U` | 取消暂存所有文件 |
+| `X` | 恢复文件（丢弃修改）|
+| `R` | 刷新 |
+
 ### 注释（Comment）
 | 快捷键 | 功能 |
 |--------|------|
@@ -369,7 +392,8 @@ sudo fc-cache -fv
 | [vimtex](https://github.com/lervag/vimtex) | LaTeX 支持 |
 | [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown 预览 |
 | [outline.nvim](https://github.com/hedyhli/outline.nvim) | 代码大纲 |
-| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git 集成 |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git 集成（行内 diff）|
+| [diffview.nvim](https://github.com/sindrets/diffview.nvim) | Git diff 查看器和文件历史 |
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | 快捷键提示 |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | 代码注释 |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | 环绕文本操作 |

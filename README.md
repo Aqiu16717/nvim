@@ -205,6 +205,29 @@ nvim
 | `<LEADER>tb` | Toggle blame |
 | `<LEADER>hd` | Diff this |
 
+### Git (Diffview)
+
+#### Open/Close
+| Key | Action |
+|-----|--------|
+| `<LEADER>gd` | Open diff view (working tree) |
+| `<LEADER>gC` | Close diff view |
+| `<LEADER>gf` | Current file history |
+| `<LEADER>gF` | Project file history |
+
+#### In Diffview Window
+| Key | Action |
+|-----|--------|
+| `q` | Close diff view |
+| `Tab` | Toggle file panel |
+| `j` / `k` | Next / previous file |
+| `Enter` / `o` | Open file |
+| `-` | Stage/unstage file |
+| `S` | Stage all files |
+| `U` | Unstage all files |
+| `X` | Restore file (discard changes) |
+| `R` | Refresh |
+
 ### Comment
 | Key | Action |
 |-----|--------|
@@ -368,7 +391,8 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 | [vimtex](https://github.com/lervag/vimtex) | LaTeX support |
 | [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown preview |
 | [outline.nvim](https://github.com/hedyhli/outline.nvim) | Code outline |
-| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git integration |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git integration (inline diff) |
+| [diffview.nvim](https://github.com/sindrets/diffview.nvim) | Git diff viewer and file history |
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | Key binding hints |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Code commenting |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | Surround text manipulation |
