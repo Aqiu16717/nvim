@@ -190,9 +190,25 @@ nvim
 | `<LEADER>ca` | Code action |
 
 ### Markdown
+
+#### Browser Preview (markdown-preview)
 | Key | Action |
 |-----|--------|
-| `<LEADER>p` | Toggle Markdown preview |
+| `<LEADER>p` | Toggle Markdown preview in browser |
+
+#### Inline Rendering (render-markdown)
+| Key | Action |
+|-----|--------|
+| `<LEADER>mp` | Toggle inline markdown rendering |
+
+**Features**:
+- Beautiful heading rendering with icons and background colors
+- Code blocks with language icons and syntax highlighting
+- Checkboxes with visual states (☐ ☒)
+- Tables with borders and alignment
+- Quote blocks with visual indicators
+- Bullet lists with different icons per level
+- LaTeX formula support
 
 ### Git (Gitsigns)
 | Key | Action |
@@ -389,7 +405,8 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Buffer tabs |
 | [conform.nvim](https://github.com/stevearc/conform.nvim) | Code formatting |
 | [vimtex](https://github.com/lervag/vimtex) | LaTeX support |
-| [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown preview |
+| [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown preview in browser |
+| [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) | Inline Markdown rendering |
 | [outline.nvim](https://github.com/hedyhli/outline.nvim) | Code outline |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git integration (inline diff) |
 | [diffview.nvim](https://github.com/sindrets/diffview.nvim) | Git diff viewer and file history |

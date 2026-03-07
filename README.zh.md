@@ -191,9 +191,25 @@ nvim
 | `<LEADER>ca` | 代码操作 |
 
 ### Markdown
+
+#### 浏览器预览（markdown-preview）
 | 快捷键 | 功能 |
 |--------|------|
-| `<LEADER>p` | 切换 Markdown 预览 |
+| `<LEADER>p` | 在浏览器中预览 Markdown |
+
+#### 行内渲染（render-markdown）
+| 快捷键 | 功能 |
+|--------|------|
+| `<LEADER>mp` | 切换行内 Markdown 渲染 |
+
+**功能特性**：
+- 精美的标题渲染，带图标和背景色
+- 代码块显示语言图标和语法高亮
+- 复选框可视化状态（☐ ☒）
+- 表格带边框和对齐
+- 引用块带视觉指示器
+- 多级列表使用不同图标
+- 支持 LaTeX 公式
 
 ### Git（Gitsigns）
 | 快捷键 | 功能 |
@@ -390,10 +406,12 @@ sudo fc-cache -fv
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | 缓冲区标签 |
 | [conform.nvim](https://github.com/stevearc/conform.nvim) | 代码格式化 |
 | [vimtex](https://github.com/lervag/vimtex) | LaTeX 支持 |
-| [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown 预览 |
+| [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | 浏览器中预览 Markdown |
+| [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) | 行内 Markdown 渲染 |
 | [outline.nvim](https://github.com/hedyhli/outline.nvim) | 代码大纲 |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git 集成（行内 diff）|
 | [diffview.nvim](https://github.com/sindrets/diffview.nvim) | Git diff 查看器和文件历史 |
+hello
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | 快捷键提示 |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | 代码注释 |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | 环绕文本操作 |
