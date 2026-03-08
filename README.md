@@ -189,6 +189,16 @@ nvim
 | `<LEADER>r` | Rename symbol |
 | `<LEADER>ca` | Code action |
 
+### Outline (Code Structure)
+| Key | Action |
+|-----|--------|
+| `<LEADER>o` | Toggle outline sidebar |
+| `Enter` | Jump to symbol |
+| `K` | Toggle preview |
+| `r` | Rename symbol |
+| `a` | Code actions |
+| `<C-space>` | Hover symbol |
+
 ### Markdown
 
 #### Browser Preview (markdown-preview)
