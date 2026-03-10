@@ -47,6 +47,36 @@ nvim
 :Mason
 ```
 
+### Dashboard (Startup Screen)
+
+When you open Neovim without a file argument, a dashboard will appear:
+
+```
+ ╔═══════════════════════════════════════════════════════╗
+ ║  [ Neovim Logo ]                                      ║
+ ║                                                       ║
+ ║  📁  Find File           (f)                         ║
+ ║  📄  Recent Files        (r)                         ║
+ ║  🔍  Find Text           (g)                         ║
+ ║  ⚙️   Config              (c)                         ║
+ ║  📦  Update Plugins      (u)                         ║
+ ║  ❌  Quit                (q)                         ║
+ ║                                                       ║
+ ║  🗂️   Recent Projects                                 ║
+ ║  📝  Recent Files                                     ║
+ ╚═══════════════════════════════════════════════════════╝
+```
+
+| Key | Action |
+|-----|--------|
+| `f` | Find file |
+| `r` | Recent files |
+| `g` | Live grep |
+| `c` | Edit config |
+| `u` | Update plugins |
+| `q` | Quit |
+| `<LEADER>h` | Open dashboard anytime |
+
 ## 📁 Directory Structure
 
 ```
@@ -427,6 +457,7 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 | Plugin | Description |
 |--------|-------------|
 | [lazy.nvim](https://github.com/folke/lazy.nvim) | Plugin manager |
+| [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim) | Startup dashboard |
 | [catppuccin](https://github.com/catppuccin/nvim) | Colorscheme with auto light/dark mode |
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy finder |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Syntax highlighting |

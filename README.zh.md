@@ -47,6 +47,36 @@ nvim
 :Mason
 ```
 
+### 启动页（Dashboard）
+
+当你不带文件参数打开 Neovim 时，会显示一个启动页：
+
+```
+ ╔═══════════════════════════════════════════════════════╗
+ ║  [ Neovim Logo ]                                      ║
+ ║                                                       ║
+ ║  📁  查找文件           (f)                          ║
+ ║  📄  最近文件           (r)                          ║
+ ║  🔍  查找文本           (g)                          ║
+ ║  ⚙️   配置               (c)                          ║
+ ║  📦  更新插件           (u)                          ║
+ ║  ❌  退出               (q)                          ║
+ ║                                                       ║
+ ║  🗂️   最近项目                                        ║
+ ║  📝  最近文件                                         ║
+ ╚═══════════════════════════════════════════════════════╝
+```
+
+| 快捷键 | 功能 |
+|--------|------|
+| `f` | 查找文件 |
+| `r` | 最近文件 |
+| `g` | 实时搜索 |
+| `c` | 编辑配置 |
+| `u` | 更新插件 |
+| `q` | 退出 |
+| `<LEADER>h` | 随时打开启动页 |
+
 ## 📁 目录结构
 
 ```
@@ -428,6 +458,7 @@ sudo fc-cache -fv
 | 插件 | 说明 |
 |------|------|
 | [lazy.nvim](https://github.com/folke/lazy.nvim) | 插件管理器 |
+| [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim) | 启动页仪表盘 |
 | [catppuccin](https://github.com/catppuccin/nvim) | 配色方案，支持自动深浅色切换 |
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | 模糊查找 |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法高亮 |
