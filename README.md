@@ -372,25 +372,19 @@ When you open Neovim without a file argument, a dashboard will appear:
 
 ## 🎨 Theme
 
-This configuration uses [github-nvim-theme](https://github.com/projekt0n/github-nvim-theme) with GitHub's official light theme.
+This configuration uses [catppuccin](https://github.com/catppuccin/nvim) theme.
 
-**Default**: `github_light` - GitHub's light theme
+**Default**: `catppuccin-latte` (light)
 
-**Available light variants**:
-- `github_light` - Default GitHub light
-- `github_light_default` - Classic GitHub light
-- `github_light_high_contrast` - High contrast light
-- `github_light_colorblind` - Colorblind-friendly light
-- `github_light_tritanopia` - Tritanopia-friendly light
+**Available variants**:
+- `catppuccin-latte` - Light theme (default)
+- `catppuccin-frappe` - Dark theme (soft)
+- `catppuccin-macchiato` - Dark theme (medium)
+- `catppuccin-mocha` - Dark theme (strong)
 
-**Dark variants** (if you prefer dark):
-- `github_dark` - Default GitHub dark
-- `github_dark_dimmed` - Dimmed dark
-- `github_dark_high_contrast` - High contrast dark
-
-To change theme, edit `lua/plugins/plugin-github-theme.lua`:
+To change theme, edit `lua/plugins/plugin-catppuccin.lua`:
 ```lua
-vim.cmd("colorscheme github_light")  -- Change to your preferred variant
+flavour = "mocha"  -- Change to your preferred variant
 ```
 
 ## 🔧 Maintenance
@@ -509,7 +503,7 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 |--------|-------------|
 | [lazy.nvim](https://github.com/folke/lazy.nvim) | Plugin manager |
 | [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim) | Startup dashboard |
-| [github-nvim-theme](https://github.com/projekt0n/github-nvim-theme) | GitHub's official colorscheme |
+| [catppuccin](https://github.com/catppuccin/nvim) | Colorscheme |
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy finder |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Syntax highlighting |
 | [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP configurations |

@@ -373,25 +373,19 @@ nvim
 
 ## 🎨 主题
 
-本配置使用 [github-nvim-theme](https://github.com/projekt0n/github-nvim-theme)，采用 GitHub 官方浅色主题。
+本配置使用 [catppuccin](https://github.com/catppuccin/nvim) 主题。
 
-**默认**：`github_light` - GitHub 浅色主题
+**默认**：`catppuccin-latte`（浅色）
 
-**可用浅色变体**：
-- `github_light` - 默认 GitHub 浅色
-- `github_light_default` - 经典 GitHub 浅色
-- `github_light_high_contrast` - 高对比度浅色
-- `github_light_colorblind` - 色盲友好浅色
-- `github_light_tritanopia` - 蓝黄色盲友好浅色
+**可用变体**：
+- `catppuccin-latte` - 浅色主题（默认）
+- `catppuccin-frappe` - 深色主题（柔和）
+- `catppuccin-macchiato` - 深色主题（中等）
+- `catppuccin-mocha` - 深色主题（强烈）
 
-**深色变体**（如果你喜欢深色）：
-- `github_dark` - 默认 GitHub 深色
-- `github_dark_dimmed` - 暗色深色
-- `github_dark_high_contrast` - 高对比度深色
-
-如需更改主题，编辑 `lua/plugins/plugin-github-theme.lua`：
+如需更改主题，编辑 `lua/plugins/plugin-catppuccin.lua`：
 ```lua
-vim.cmd("colorscheme github_light")  -- 改为你喜欢的变体
+flavour = "mocha"  -- 改为你喜欢的变体
 ```
 
 ## 🔧 维护操作
@@ -510,7 +504,7 @@ sudo fc-cache -fv
 |------|------|
 | [lazy.nvim](https://github.com/folke/lazy.nvim) | 插件管理器 |
 | [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim) | 启动页仪表盘 |
-| [github-nvim-theme](https://github.com/projekt0n/github-nvim-theme) | GitHub 官方配色方案 |
+| [catppuccin](https://github.com/catppuccin/nvim) | 配色方案 |
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | 模糊查找 |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法高亮 |
 | [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP 配置 |
