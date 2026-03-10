@@ -75,7 +75,7 @@ When you open Neovim without a file argument, a dashboard will appear:
 | `c` | Edit config |
 | `u` | Update plugins |
 | `q` | Quit |
-| `<LEADER>h` | Open dashboard anytime |
+| `<LEADER>H` | Open dashboard anytime |
 
 ## 📁 Directory Structure
 

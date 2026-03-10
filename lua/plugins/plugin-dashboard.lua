@@ -114,8 +114,8 @@ return {
                 end,
             })
 
-            -- Keymap to open dashboard
-            vim.keymap.set("n", "<leader>h", "<cmd>Dashboard<cr>", { desc = "Open dashboard" })
+            -- Keymap to open dashboard (using <leader>H to avoid conflict with window navigation)
+            vim.keymap.set("n", "<leader>H", "<cmd>Dashboard<cr>", { desc = "Open dashboard" })
         end,
     },
 }
