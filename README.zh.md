@@ -270,6 +270,29 @@ nvim
 | `cs{old}{new}` | 修改环绕字符 |
 | `S{char}`（可视模式）| 为选中区域添加环绕 |
 
+### 终端（Toggleterm）
+
+#### 打开/关闭终端
+| 快捷键 | 功能 |
+|--------|------|
+| `<LEADER>tt` | 切换终端（水平）|
+| `<LEADER>tf` | 切换终端（浮动）|
+| `<LEADER>tv` | 切换终端（垂直）|
+| `<C-\>` | 快速切换终端 |
+| `<Esc>` | 退出终端模式 |
+
+#### 特殊终端
+| 快捷键 | 功能 |
+|--------|------|
+| `<LEADER>tg` | 打开 lazygit（需安装 lazygit）|
+| `<LEADER>tp` | 打开 Python REPL |
+| `<LEADER>tn` | 打开 Node REPL |
+
+#### 终端导航
+| 快捷键 | 功能 |
+|--------|------|
+| `<C-h/j/k/l>` | 从终端窗口导航到其他窗口 |
+
 ## 📝 常用命令
 
 | 命令 | 说明 |
@@ -425,6 +448,7 @@ hello
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | 快捷键提示 |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | 代码注释 |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | 环绕文本操作 |
+| [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | 集成终端 |
 | [im-select.nvim](https://github.com/keaising/im-select.nvim) | 自动输入法切换 |
 
 ## 📄 许可证

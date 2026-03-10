@@ -269,6 +269,29 @@ nvim
 | `cs{old}{new}` | Change surround |
 | `S{char}` (visual) | Surround selection |
 
+### Terminal (Toggleterm)
+
+#### Open/Close Terminal
+| Key | Action |
+|-----|--------|
+| `<LEADER>tt` | Toggle terminal (horizontal) |
+| `<LEADER>tf` | Toggle terminal (float) |
+| `<LEADER>tv` | Toggle terminal (vertical) |
+| `<C-\>` | Quick toggle terminal |
+| `<Esc>` | Exit terminal mode |
+
+#### Special Terminals
+| Key | Action |
+|-----|--------|
+| `<LEADER>tg` | Open lazygit (requires lazygit installed) |
+| `<LEADER>tp` | Open Python REPL |
+| `<LEADER>tn` | Open Node REPL |
+
+#### Terminal Navigation
+| Key | Action |
+|-----|--------|
+| `<C-h/j/k/l>` | Navigate between windows from terminal |
+
 ## 📝 Commands
 
 | Command | Description |
@@ -423,6 +446,7 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | Key binding hints |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Code commenting |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | Surround text manipulation |
+| [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | Integrated terminal |
 | [im-select.nvim](https://github.com/keaising/im-select.nvim) | Automatic input method switching |
 
 ## 📄 License
