@@ -5,6 +5,8 @@ return {
         dependencies = {
             -- UI for DAP
             "rcarriga/nvim-dap-ui",
+            -- Required by nvim-dap-ui
+            "nvim-neotest/nvim-nio",
             -- Virtual text for current line
             "theHamsta/nvim-dap-virtual-text",
             -- Mason integration for automatic adapter installation
