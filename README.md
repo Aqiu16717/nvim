@@ -322,6 +322,43 @@ When you open Neovim without a file argument, a dashboard will appear:
 |-----|--------|
 | `<C-h/j/k/l>` | Navigate between windows from terminal |
 
+### Debugging (DAP - Debug Adapter Protocol)
+
+#### Breakpoints
+| Key | Action |
+|-----|--------|
+| `<LEADER>db` | Toggle breakpoint |
+| `<LEADER>dB` | Set conditional breakpoint |
+
+#### Debug Controls
+| Key | Action |
+|-----|--------|
+| `<LEADER>dc` | Start/Continue debugging |
+| `<LEADER>dt` | Terminate debugging |
+| `<LEADER>dp` | Pause |
+| `<LEADER>dr` | Restart |
+
+#### Step Controls
+| Key | Action |
+|-----|--------|
+| `<LEADER>dj` | Step over |
+| `<LEADER>dk` | Step into |
+| `<LEADER>do` | Step out |
+
+#### Debug UI
+| Key | Action |
+|-----|--------|
+| `<LEADER>du` | Toggle debug UI |
+| `<LEADER>de` | Evaluate expression |
+
+**Supported languages**: C, C++, Rust
+
+**Setup for C++ debugging**:
+1. Install debug adapter: `:Mason` → install `codelldb` or `cpptools`
+2. Set breakpoint with `<LEADER>db`
+3. Start debugging with `<LEADER>dc`
+4. Enter path to your compiled executable when prompted
+
 ## 📝 Commands
 
 | Command | Description |
@@ -478,6 +515,8 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Code commenting |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | Surround text manipulation |
 | [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | Integrated terminal |
+| [nvim-dap](https://github.com/mfussenegger/nvim-dap) | Debug Adapter Protocol |
+| [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) | Debugging UI |
 | [im-select.nvim](https://github.com/keaising/im-select.nvim) | Automatic input method switching |
 
 ## 📄 License

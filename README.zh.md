@@ -323,6 +323,43 @@ nvim
 |--------|------|
 | `<C-h/j/k/l>` | 从终端窗口导航到其他窗口 |
 
+### 调试（DAP - Debug Adapter Protocol）
+
+#### 断点
+| 快捷键 | 功能 |
+|--------|------|
+| `<LEADER>db` | 切换断点 |
+| `<LEADER>dB` | 设置条件断点 |
+
+#### 调试控制
+| 快捷键 | 功能 |
+|--------|------|
+| `<LEADER>dc` | 开始/继续调试 |
+| `<LEADER>dt` | 终止调试 |
+| `<LEADER>dp` | 暂停 |
+| `<LEADER>dr` | 重新启动 |
+
+#### 单步调试
+| 快捷键 | 功能 |
+|--------|------|
+| `<LEADER>dj` | 单步跳过 |
+| `<LEADER>dk` | 单步进入 |
+| `<LEADER>do` | 单步跳出 |
+
+#### 调试界面
+| 快捷键 | 功能 |
+|--------|------|
+| `<LEADER>du` | 切换调试界面 |
+| `<LEADER>de` | 计算表达式 |
+
+**支持语言**：C、C++、Rust
+
+**C++ 调试设置**：
+1. 安装调试适配器：`:Mason` → 安装 `codelldb` 或 `cpptools`
+2. 使用 `<LEADER>db` 设置断点
+3. 使用 `<LEADER>dc` 开始调试
+4. 按提示输入编译后的可执行文件路径
+
 ## 📝 常用命令
 
 | 命令 | 说明 |
@@ -480,6 +517,8 @@ hello
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | 代码注释 |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | 环绕文本操作 |
 | [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | 集成终端 |
+| [nvim-dap](https://github.com/mfussenegger/nvim-dap) | 调试适配器协议 |
+| [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) | 调试界面 |
 | [im-select.nvim](https://github.com/keaising/im-select.nvim) | 自动输入法切换 |
 
 ## 📄 许可证
