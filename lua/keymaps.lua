@@ -80,8 +80,11 @@ vim.keymap.set('n', 'gf', function()
             return
         end
     end
-    -- Fall back to default gf behavior
-    vim.cmd('normal! gf')
+    -- Fall back to default gf behavior (silent to avoid errors)
+    local ok, err = pcall(vim.cmd, 'normal! gf')
+    if not ok then
+        vim.notify("Can't find file: " .. cfile, vim.log.levels.WARN)
+    end
 end, { desc = "Go to file (enhanced for C/C++ headers)" })
 
 
