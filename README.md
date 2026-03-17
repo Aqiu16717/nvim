@@ -219,6 +219,12 @@ When you open Neovim without a file argument, a dashboard will appear:
 | `<LEADER>r` | Rename symbol |
 | `<LEADER>ca` | Code action |
 
+#### C/C++ Specific
+| Key | Action |
+|-----|--------|
+| `<LEADER>a` | Switch between header and source file (requires clangd) |
+| `gf` | Go to file (enhanced for C/C++ headers) |
+
 ### Outline (Code Structure)
 | Key | Action |
 |-----|--------|
