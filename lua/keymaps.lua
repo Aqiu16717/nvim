@@ -64,6 +64,26 @@ vim.keymap.set('n', 'gh', ":lua vim.lsp.buf.hover()<CR>")
 vim.keymap.set('n', '<LEADER>r', ":lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set('n', '<LEADER>ca', ":lua vim.lsp.buf.code_action()<CR>")
 
+-- C/C++ switch header/source
+-- Method 1: Using clangd LSP (recommended if using clangd)
+vim.keymap.set('n', '<LEADER>a', ":ClangdSwitchSourceHeader<CR>", { desc = "Switch between header and source file (clangd)" })
+
+-- Method 2: Using custom function (works without clangd)
+-- Alternative mapping using gf on the #include line
+vim.keymap.set('n', 'gf', function()
+    local cfile = vim.fn.expand('<cfile>')
+    if cfile:match('%.h$') or cfile:match('%.hpp$') or cfile:match('%.c$') or cfile:match('%.cpp$') or cfile:match('%.cc$') then
+        -- Try to find the file in the project
+        local found = vim.fn.findfile(cfile, vim.fn.getcwd() .. '/**')
+        if found ~= '' then
+            vim.cmd('edit ' .. found)
+            return
+        end
+    end
+    -- Fall back to default gf behavior
+    vim.cmd('normal! gf')
+end, { desc = "Go to file (enhanced for C/C++ headers)" })
+
 
 
 -- outline
