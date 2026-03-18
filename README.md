@@ -419,13 +419,34 @@ When editing C/C++ files in a project with `.clang-format`, Neovim will automati
 - Apply them to `shiftwidth`, `tabstop`, and `expandtab`
 - This ensures consistent indentation while typing, before saving
 
-**Example**: If your `.clang-format` has:
+**Supported formats**:
 ```yaml
+# Explicit settings
 IndentWidth: 2
 UseTab: Never
+
+# Or using BasedOnStyle
+BasedOnStyle: Google  # Automatically uses 2 spaces
+BasedOnStyle: LLVM    # Automatically uses 2 spaces
+BasedOnStyle: WebKit  # Automatically uses 4 spaces
+BasedOnStyle: Microsoft # Automatically uses 4 tabs
 ```
 
-Neovim will automatically use 2-space indentation in that project.
+**Manual commands** (if auto-detection doesn't work):
+```vim
+:SetGoogleStyle       " Google/Chromium/LLVM/Mozilla (2 spaces)
+:SetLLVMStyle         " LLVM style (2 spaces)
+:SetWebKitStyle       " WebKit style (4 spaces)
+:SetMicrosoftStyle    " Microsoft style (4 tabs)
+:ClangFormatInfo     " Show detected config
+```
+
+**Project-specific config** (create `.nvim.lua` in project root):
+```lua
+-- .nvim.lua
+vim.bo.shiftwidth = 2
+vim.bo.expandtab = true
+```
 
 ### Input Method Switching (im-select)
 

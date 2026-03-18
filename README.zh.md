@@ -420,13 +420,34 @@ flavour = "mocha"  -- 改为你喜欢的变体
 - 自动应用到 `shiftwidth`、`tabstop` 和 `expandtab`
 - 确保输入时的缩进与保存时的格式化一致
 
-**示例**：如果你的 `.clang-format` 包含：
+**支持的格式**：
 ```yaml
+# 显式设置
 IndentWidth: 2
 UseTab: Never
+
+# 或使用 BasedOnStyle
+BasedOnStyle: Google    # 自动使用 2 空格
+BasedOnStyle: LLVM      # 自动使用 2 空格
+BasedOnStyle: WebKit    # 自动使用 4 空格
+BasedOnStyle: Microsoft # 自动使用 4 制表符
 ```
 
-Neovim 将自动在该项目中使用 2 空格缩进。
+**手动命令**（如果自动检测不工作）：
+```vim
+:SetGoogleStyle       " Google/Chromium/LLVM/Mozilla (2 空格)
+:SetLLVMStyle         " LLVM 风格 (2 空格)
+:SetWebKitStyle       " WebKit 风格 (4 空格)
+:SetMicrosoftStyle    " Microsoft 风格 (4 制表符)
+:ClangFormatInfo     " 显示检测到的配置
+```
+
+**项目专用配置**（在项目根目录创建 `.nvim.lua`）：
+```lua
+-- .nvim.lua
+vim.bo.shiftwidth = 2
+vim.bo.expandtab = true
+```
 
 ### 输入法自动切换（im-select）
 
