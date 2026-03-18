@@ -8,3 +8,6 @@ require("core.autocmds")
 
 -- Auto-detect .clang-format for C/C++ projects
 require("core.clang-format-detector").setup()
+
+-- Load project-specific .nvim.lua config
+require("core.project-config").setup()

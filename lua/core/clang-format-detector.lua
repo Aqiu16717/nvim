@@ -3,6 +3,17 @@
 
 local M = {}
 
+-- Style presets for BasedOnStyle
+local style_presets = {
+    Google = { indent_width = 2, use_tab = "Never" },
+    LLVM = { indent_width = 2, use_tab = "Never" },
+    Chromium = { indent_width = 2, use_tab = "Never" },
+    Mozilla = { indent_width = 2, use_tab = "Never" },
+    WebKit = { indent_width = 4, use_tab = "Never" },
+    Microsoft = { indent_width = 4, use_tab = "Always" },
+    GNU = { indent_width = 2, use_tab = "Never" },
+}
+
 -- Parse .clang-format file to extract indentation settings
 function M.parse_clang_format()
     -- Search for .clang-format or _clang-format in current directory and parents
@@ -26,7 +37,18 @@ function M.parse_clang_format()
     local content = file:read("*all")
     file:close()
     
+    -- Check for BasedOnStyle first
+    local based_on = content:match("BasedOnStyle%s*:%s*(%w+)")
+    if based_on and style_presets[based_on] then
+        -- Apply preset defaults
+        local preset = style_presets[based_on]
+        settings.indent_width = preset.indent_width
+        settings.use_tab = preset.use_tab
+        settings.based_on = based_on
+    end
+    
     -- Check for IndentWidth (handles "IndentWidth: 2" or "IndentWidth:    2")
+    -- This will override the preset if explicitly set
     local indent_width = content:match("IndentWidth%s*:%s*(%d+)")
     if indent_width then
         settings.indent_width = tonumber(indent_width)
@@ -157,5 +179,54 @@ vim.api.nvim_create_user_command("ClangFormatInfo", function()
         print("No .clang-format found")
     end
 end, { desc = "Show .clang-format info" })
+
+-- Quick set commands for common styles
+vim.api.nvim_create_user_command("SetGoogleStyle", function()
+    vim.bo.shiftwidth = 2
+    vim.bo.softtabstop = 2
+    vim.bo.tabstop = 2
+    vim.bo.expandtab = true
+    vim.notify("Applied Google Style (2 spaces)", vim.log.levels.INFO)
+end, { desc = "Set indentation to Google Style (2 spaces)" })
+
+vim.api.nvim_create_user_command("SetLLVMStyle", function()
+    vim.bo.shiftwidth = 2
+    vim.bo.softtabstop = 2
+    vim.bo.tabstop = 2
+    vim.bo.expandtab = true
+    vim.notify("Applied LLVM Style (2 spaces)", vim.log.levels.INFO)
+end, { desc = "Set indentation to LLVM Style (2 spaces)" })
+
+vim.api.nvim_create_user_command("SetChromiumStyle", function()
+    vim.bo.shiftwidth = 2
+    vim.bo.softtabstop = 2
+    vim.bo.tabstop = 2
+    vim.bo.expandtab = true
+    vim.notify("Applied Chromium Style (2 spaces)", vim.log.levels.INFO)
+end, { desc = "Set indentation to Chromium Style (2 spaces)" })
+
+vim.api.nvim_create_user_command("SetMozillaStyle", function()
+    vim.bo.shiftwidth = 2
+    vim.bo.softtabstop = 2
+    vim.bo.tabstop = 2
+    vim.bo.expandtab = true
+    vim.notify("Applied Mozilla Style (2 spaces)", vim.log.levels.INFO)
+end, { desc = "Set indentation to Mozilla Style (2 spaces)" })
+
+vim.api.nvim_create_user_command("SetWebKitStyle", function()
+    vim.bo.shiftwidth = 4
+    vim.bo.softtabstop = 4
+    vim.bo.tabstop = 4
+    vim.bo.expandtab = true
+    vim.notify("Applied WebKit Style (4 spaces)", vim.log.levels.INFO)
+end, { desc = "Set indentation to WebKit Style (4 spaces)" })
+
+vim.api.nvim_create_user_command("SetMicrosoftStyle", function()
+    vim.bo.shiftwidth = 4
+    vim.bo.softtabstop = 4
+    vim.bo.tabstop = 4
+    vim.bo.expandtab = false  -- Microsoft uses tabs
+    vim.notify("Applied Microsoft Style (4 tabs)", vim.log.levels.INFO)
+end, { desc = "Set indentation to Microsoft Style (4 tabs)" })
 
 return M
