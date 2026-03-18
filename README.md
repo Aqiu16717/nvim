@@ -410,6 +410,23 @@ flavour = "mocha"  -- Change to your preferred variant
 
 ## ⚙️ Configuration
 
+### C/C++ Development
+
+#### .clang-format Auto-detection
+
+When editing C/C++ files in a project with `.clang-format`, Neovim will automatically:
+- Detect the indentation settings (2 spaces, 4 spaces, or tabs)
+- Apply them to `shiftwidth`, `tabstop`, and `expandtab`
+- This ensures consistent indentation while typing, before saving
+
+**Example**: If your `.clang-format` has:
+```yaml
+IndentWidth: 2
+UseTab: Never
+```
+
+Neovim will automatically use 2-space indentation in that project.
+
 ### Input Method Switching (im-select)
 
 This configuration includes automatic input method switching:

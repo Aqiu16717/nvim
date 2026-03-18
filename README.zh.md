@@ -411,6 +411,23 @@ flavour = "mocha"  -- 改为你喜欢的变体
 
 ## ⚙️ 常用配置
 
+### C/C++ 开发
+
+#### .clang-format 自动检测
+
+在带有 `.clang-format` 文件的 C/C++ 项目中编辑时，Neovim 会自动：
+- 检测缩进设置（2 空格、4 空格或制表符）
+- 自动应用到 `shiftwidth`、`tabstop` 和 `expandtab`
+- 确保输入时的缩进与保存时的格式化一致
+
+**示例**：如果你的 `.clang-format` 包含：
+```yaml
+IndentWidth: 2
+UseTab: Never
+```
+
+Neovim 将自动在该项目中使用 2 空格缩进。
+
 ### 输入法自动切换（im-select）
 
 本配置支持输入法自动切换：
