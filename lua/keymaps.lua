@@ -61,7 +61,7 @@ vim.keymap.set('n', 'gi', ":lua vim.lsp.buf.implementation()<CR>")
 vim.keymap.set('n', 'gr', ":lua vim.lsp.buf.references()<CR>")
 vim.keymap.set('n', '<LEADER>F', ":lua vim.lsp.buf.format()<CR>")
 vim.keymap.set('n', 'gh', ":lua vim.lsp.buf.hover()<CR>")
-vim.keymap.set('n', '<LEADER>r', ":IncRename ", { desc = "Rename symbol (with preview)" })
+vim.keymap.set('n', '<LEADER>r', ":lua vim.lsp.buf.rename()<CR>", { desc = "Rename symbol" })
 vim.keymap.set('n', '<LEADER>ca', ":lua vim.lsp.buf.code_action()<CR>")
 
 -- C/C++ switch header/source

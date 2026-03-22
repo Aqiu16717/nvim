@@ -217,7 +217,7 @@ nvim
 | `gr` | 查找引用 |
 | `gh` | 悬停文档 |
 | `<LEADER>F` | 格式化代码 |
-| `<LEADER>r` | 重命名符号（实时预览）|
+| `<LEADER>r` | 重命名符号 |
 | `<LEADER>ca` | 代码操作 |
 | `<LEADER>e` | 显示诊断详情（错误/警告）|
 | `<LEADER>tv` | 切换诊断虚拟文本显示 |
@@ -571,7 +571,6 @@ hello
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | 代码注释 |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | 环绕文本操作 |
 | [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | 集成终端 |
-| [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim) | LSP 重命名（实时预览）|
 | [nvim-dap](https://github.com/mfussenegger/nvim-dap) | 调试适配器协议 |
 | [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) | 调试界面 |
 | [im-select.nvim](https://github.com/keaising/im-select.nvim) | 自动输入法切换 |
