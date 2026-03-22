@@ -216,7 +216,7 @@ When you open Neovim without a file argument, a dashboard will appear:
 | `gr` | Find references |
 | `gh` | Hover documentation |
 | `<LEADER>F` | Format code |
-| `<LEADER>r` | Rename symbol |
+| `<LEADER>r` | Rename symbol (with live preview) |
 | `<LEADER>ca` | Code action |
 | `<LEADER>e` | Show diagnostic details (Error/Warning) |
 | `<LEADER>tv` | Toggle diagnostic virtual text |
@@ -569,6 +569,7 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Code commenting |
 | [nvim-surround](https://github.com/kylechui/nvim-surround) | Surround text manipulation |
 | [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | Integrated terminal |
+| [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim) | LSP rename with live preview |
 | [nvim-dap](https://github.com/mfussenegger/nvim-dap) | Debug Adapter Protocol |
 | [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) | Debugging UI |
 | [im-select.nvim](https://github.com/keaising/im-select.nvim) | Automatic input method switching |
