@@ -3,6 +3,7 @@ return {
         "akinsho/toggleterm.nvim",
         version = "*",
         keys = {
+            { "<C-\\>", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "Toggle terminal", mode = { "n", "i" } },
             { "<leader>tt", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "Toggle terminal (horizontal)" },
             { "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", desc = "Toggle terminal (float)" },
             { "<leader>tv", "<cmd>ToggleTerm direction=vertical<cr>", desc = "Toggle terminal (vertical)" },
@@ -19,7 +20,7 @@ return {
                         return vim.o.columns * 0.4
                     end
                 end,
-                open_mapping = [[<c-\>]], -- Ctrl+\ to toggle
+                open_mapping = [[<C-\>]], -- Ctrl+\ to toggle
                 hide_numbers = true,
                 shade_filetypes = {},
                 shade_terminals = true,
@@ -93,6 +94,9 @@ return {
             function _NODE_TOGGLE()
                 node:toggle()
             end
+
+            -- Terminal mode toggle (workaround for open_mapping issue)
+            vim.api.nvim_set_keymap("t", "<C-\\>", [[<C-\><C-n><cmd>ToggleTerm direction=horizontal<cr>]], { noremap = true, silent = true })
 
             -- Auto-exit terminal mode on escape
             vim.api.nvim_set_keymap("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })

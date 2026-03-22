@@ -1,6 +1,41 @@
 -- Native LSP configuration for Neovim 0.11+
 -- See :help vim.lsp
 
+-- Diagnostic configuration: W/E signs + toggleable virtual text
+vim.diagnostic.config({
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "E",
+            [vim.diagnostic.severity.WARN] = "W",
+            [vim.diagnostic.severity.INFO] = "I",
+            [vim.diagnostic.severity.HINT] = "H",
+        },
+    },
+    virtual_text = false,  -- 默认不显示，避免干扰
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+    float = {
+        border = "rounded",
+        source = true,
+        header = "",
+        prefix = "",
+    },
+})
+
+-- Show line diagnostics in floating window
+vim.keymap.set("n", "<leader>e", function()
+    vim.diagnostic.open_float(nil, { scope = "line" })
+end, { desc = "Show diagnostic details" })
+
+-- Toggle virtual text
+vim.keymap.set("n", "<leader>tv", function()
+    local config = vim.diagnostic.config()
+    vim.diagnostic.config({
+        virtual_text = not config.virtual_text,
+    })
+end, { desc = "Toggle diagnostic virtual text" })
+
 vim.lsp.enable({
     "clangd",
     "gopls",

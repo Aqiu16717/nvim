@@ -218,6 +218,8 @@ When you open Neovim without a file argument, a dashboard will appear:
 | `<LEADER>F` | Format code |
 | `<LEADER>r` | Rename symbol |
 | `<LEADER>ca` | Code action |
+| `<LEADER>e` | Show diagnostic details (Error/Warning) |
+| `<LEADER>tv` | Toggle diagnostic virtual text |
 
 #### C/C++ Specific
 | Key | Action |
