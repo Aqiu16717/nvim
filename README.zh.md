@@ -331,6 +331,52 @@ nvim
 |--------|------|
 | `<C-h/j/k/l>` | 从终端窗口导航到其他窗口 |
 
+### AI 辅助开发
+
+本配置集成了 AI 驱动的开发工具：
+
+#### Avante.nvim（AI 对话与代码编辑）
+
+类似 Cursor IDE，提供 AI 对话和智能代码编辑功能。
+
+| 快捷键 | 功能 |
+|--------|------|
+| `<LEADER>aa` | 打开 AI 侧边栏 |
+| `<LEADER>ar` | 刷新 AI 侧边栏 |
+| `<LEADER>af` | 聚焦 AI 侧边栏 |
+| `<LEADER>ae` | 使用 AI 指令编辑代码 |
+| `<LEADER>ah` | 向 AI 询问代码 |
+
+**配置方法：**
+```bash
+# 设置 API 密钥（添加到 ~/.zshrc 或 ~/.bashrc）
+export ANTHROPIC_API_KEY=your_claude_api_key
+# 或
+export OPENAI_API_KEY=your_openai_api_key
+```
+
+**使用方法：**
+1. 打开任意代码文件
+2. 按 `<LEADER>aa` 打开 AI 侧边栏
+3. 提问或请求代码修改
+4. AI 会建议编辑，一键即可应用
+
+#### GitHub Copilot（代码补全）
+
+| 快捷键 | 功能 |
+|--------|------|
+| `<M-l>` (Alt+l) | 接受建议 |
+| `<M-]>` (Alt+]) | 下一个建议 |
+| `<M-[>` (Alt+[) | 上一个建议 |
+| `<C-]>` (Ctrl+]) | 关闭建议 |
+| `<M-CR>` (Alt+Enter) | 打开 Copilot 面板 |
+
+**配置方法：**
+```bash
+# 在 Neovim 中运行认证
+:Copilot auth
+```
+
 ### 调试（DAP - Debug Adapter Protocol）
 
 #### 断点
@@ -574,6 +620,8 @@ hello
 | [nvim-dap](https://github.com/mfussenegger/nvim-dap) | 调试适配器协议 |
 | [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) | 调试界面 |
 | [im-select.nvim](https://github.com/keaising/im-select.nvim) | 自动输入法切换 |
+| [avante.nvim](https://github.com/yetone/avante.nvim) | AI 对话和代码编辑（类似 Cursor）|
+| [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | GitHub Copilot 集成 |
 
 ## 📄 许可证
 

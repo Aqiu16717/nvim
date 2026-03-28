@@ -330,6 +330,52 @@ When you open Neovim without a file argument, a dashboard will appear:
 |-----|--------|
 | `<C-h/j/k/l>` | Navigate between windows from terminal |
 
+### AI Assistance
+
+This configuration includes AI-powered development tools:
+
+#### Avante.nvim (AI Chat & Code Edit)
+
+Similar to Cursor IDE, providing AI chat and intelligent code editing.
+
+| Key | Action |
+|-----|--------|
+| `<LEADER>aa` | Open AI sidebar |
+| `<LEADER>ar` | Refresh AI sidebar |
+| `<LEADER>af` | Focus AI sidebar |
+| `<LEADER>ae` | Edit with AI instruction |
+| `<LEADER>ah` | Ask AI about code |
+
+**Setup:**
+```bash
+# Set your API key (add to ~/.zshrc or ~/.bashrc)
+export ANTHROPIC_API_KEY=your_claude_api_key
+# or
+export OPENAI_API_KEY=your_openai_api_key
+```
+
+**Usage:**
+1. Open any code file
+2. Press `<LEADER>aa` to open AI sidebar
+3. Ask questions or request code changes
+4. AI will suggest edits that you can apply with one key
+
+#### GitHub Copilot (Code Completion)
+
+| Key | Action |
+|-----|--------|
+| `<M-l>` (Alt+l) | Accept suggestion |
+| `<M-]>` (Alt+]) | Next suggestion |
+| `<M-[>` (Alt+[) | Previous suggestion |
+| `<C-]>` (Ctrl+]) | Dismiss suggestion |
+| `<M-CR>` (Alt+Enter) | Open Copilot panel |
+
+**Setup:**
+```bash
+# Authenticate Copilot (run in Neovim)
+:Copilot auth
+```
+
 ### Debugging (DAP - Debug Adapter Protocol)
 
 #### Breakpoints
@@ -572,6 +618,8 @@ Then set your terminal font to a Nerd Font (e.g., Hack Nerd Font).
 | [nvim-dap](https://github.com/mfussenegger/nvim-dap) | Debug Adapter Protocol |
 | [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) | Debugging UI |
 | [im-select.nvim](https://github.com/keaising/im-select.nvim) | Automatic input method switching |
+| [avante.nvim](https://github.com/yetone/avante.nvim) | AI chat and code editing (like Cursor) |
+| [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | GitHub Copilot integration |
 
 ## 📄 License
 
